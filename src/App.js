@@ -1,24 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import { Container, Row, Col } from 'reactstrap';
+
+import Menu from './components/Menu';
+import Buttons from './components/Buttons';
+import BookCard from './components/BookCard';
+import BookTable from './components/BookTable';
+import Paginations from './components/Paginations';
+import FormLogin from './components/FormLogin';
+import Search from './components/Search';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Menu />
+      <Container>
+        <Row>
+          <Buttons />
+        </Row>
+        <Row>
+          <BookCard />
+        </Row>
+        <Row>
+          <BookTable />
+        </Row>
+        <Row>
+          <Paginations />
+        </Row>
+        <Row>
+          <FormLogin />
+        </Row>
+        <Row>
+          <Search />
+        </Row>
+      </Container>
     </div>
   );
 }
